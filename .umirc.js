@@ -23,7 +23,7 @@ export default {
         path: '/',
         component: '../layouts/index',
         routes: [
-            {path: "/", component: 'puzzlecards'},
+            {path: "/", component: '/list/index'},
             {
                 path: '/dashboard',
                 routes: [

@@ -1,7 +1,7 @@
 import request from '../util/request';
 
 const delay = (millisecond) => {
-  return new Promise((resolve) => {
+  return new Promise((resolve,reject) => {
     setTimeout(resolve, millisecond);
   });
 };
@@ -16,7 +16,7 @@ export default {
   effects:{
     *queryInitCards(_,sagaEffects){
       var {call,put}=sagaEffects;
-      const endPointURI = 'http://114.116.89.193:8999/test/cardList';
+      const endPointURI = '/test/cardList';
       const puzzle = yield call(request, endPointURI);
       yield put({ type: 'addNewCard', payload: puzzle });
 
