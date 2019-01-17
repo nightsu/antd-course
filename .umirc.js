@@ -34,5 +34,11 @@ export default {
             }
         ]
     },
-  ]
+  ],
+  proxy: {
+    '/test': {
+      target: 'http://114.116.89.193:8999/',
+      changeOrigin: true,
+    },
+  },
 }
